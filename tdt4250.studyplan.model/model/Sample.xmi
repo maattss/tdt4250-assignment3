@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tdt4250.assignment.studyplan:Program
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:tdt4250.assignment.studyplan="https://tdt4250/assignment/studyplan"
+    xsi:schemaLocation="https://tdt4250/assignment/studyplan studyplan.ecore"
+    code="MIDT"
+    name="Msc - 2 years - Computer Science">
+  <specializations
+      code="SE101"
+      name="Software Development">
+    <semesters
+        code="1"
+        name="Semester 1">
+      <courses
+          status="ELECTIVE">
+        <course
+            code="TDT4250"
+            name="Advanced Software Design"
+            credits="7.5"/>
+      </courses>
+      <courses
+          status="ELECTIVE">
+        <course
+            code="IT3402"
+            name="Design of Graphical User Interface"
+            credits="7.5"/>
+      </courses>
+      <courses>
+        <course
+            code="TDT4136"
+            name="Intro to Artificial Intelligence"
+            credits="7.5"/>
+      </courses>
+      <courses>
+        <course
+            code="TDT4117"
+            name="Information Systems"
+            credits="7.5"/>
+      </courses>
+    </semesters>
+    <semesters
+        code="2"
+        name="Semester 2">
+      <courses
+          status="ELECTIVE">
+        <course
+            code="TTM4135"
+            name="Information Security"
+            credits="7.5"/>
+      </courses>
+      <courses
+          status="ELECTIVE">
+        <course
+            code="TDT4242"
+            name="Advanced Software Engineering"
+            credits="7.5"/>
+      </courses>
+      <courses>
+        <course
+            code="TDT4250"
+            name="Software Architecture"
+            credits="7.5"/>
+      </courses>
+    </semesters>
+  </specializations>
+</tdt4250.assignment.studyplan:Program>

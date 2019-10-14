@@ -1,0 +1,4 @@
+INDEX VERSION 1.131+/Users/matstyldum/Code/eclipse/tdt4250-assignment3/.metadata/.plugins/org.eclipse.jdt.core
+4107664945.index
+420747017.index
+862409412.index
