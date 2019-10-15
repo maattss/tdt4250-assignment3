@@ -15,7 +15,6 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link studyplan.Specialization#getCode <em>Code</em>}</li>
  *   <li>{@link studyplan.Specialization#getName <em>Name</em>}</li>
  *   <li>{@link studyplan.Specialization#getSemesters <em>Semesters</em>}</li>
  *   <li>{@link studyplan.Specialization#getSpecializations <em>Specializations</em>}</li>
@@ -26,28 +25,6 @@ import org.eclipse.emf.ecore.EObject;
  * @generated
  */
 public interface Specialization extends EObject {
-	/**
-	 * Returns the value of the '<em><b>Code</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Code</em>' attribute.
-	 * @see #setCode(String)
-	 * @see studyplan.StudyplanPackage#getSpecialization_Code()
-	 * @model
-	 * @generated
-	 */
-	String getCode();
-
-	/**
-	 * Sets the value of the '{@link studyplan.Specialization#getCode <em>Code</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Code</em>' attribute.
-	 * @see #getCode()
-	 * @generated
-	 */
-	void setCode(String value);
-
 	/**
 	 * Returns the value of the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->

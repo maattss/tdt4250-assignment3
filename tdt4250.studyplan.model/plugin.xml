@@ -9,9 +9,16 @@
    <extension point="org.eclipse.emf.ecore.generated_package">
       <!-- @generated studyplan -->
       <package
-            uri="https://tdt4250/assignment/studyplan"
+            uri="platform:/plugin/tdt4250.studyplan.model/model/studyplan.ecore"
             class="studyplan.StudyplanPackage"
             genModel="model/studyplan.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.extension_parser">
+      <!-- @generated studyplan -->
+      <parser
+            type="studyplan"
+            class="studyplan.util.StudyplanResourceFactoryImpl"/>
    </extension>
 
 </plugin>

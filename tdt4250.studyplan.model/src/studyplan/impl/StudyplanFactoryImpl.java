@@ -62,6 +62,7 @@ public class StudyplanFactoryImpl extends EFactoryImpl implements StudyplanFacto
 			case StudyplanPackage.SPECIALIZATION: return createSpecialization();
 			case StudyplanPackage.COURSE: return createCourse();
 			case StudyplanPackage.SEMESTER_COURSE: return createSemesterCourse();
+			case StudyplanPackage.DEPARTMENT: return createDepartment();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -77,6 +78,8 @@ public class StudyplanFactoryImpl extends EFactoryImpl implements StudyplanFacto
 		switch (eDataType.getClassifierID()) {
 			case StudyplanPackage.COURSE_STATUS:
 				return createCourseStatusFromString(eDataType, initialValue);
+			case StudyplanPackage.SEASON:
+				return createSeasonFromString(eDataType, initialValue);
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
@@ -92,6 +95,8 @@ public class StudyplanFactoryImpl extends EFactoryImpl implements StudyplanFacto
 		switch (eDataType.getClassifierID()) {
 			case StudyplanPackage.COURSE_STATUS:
 				return convertCourseStatusToString(eDataType, instanceValue);
+			case StudyplanPackage.SEASON:
+				return convertSeasonToString(eDataType, instanceValue);
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
@@ -152,6 +157,16 @@ public class StudyplanFactoryImpl extends EFactoryImpl implements StudyplanFacto
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public Department createDepartment() {
+		DepartmentImpl department = new DepartmentImpl();
+		return department;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public CourseStatus createCourseStatusFromString(EDataType eDataType, String initialValue) {
 		CourseStatus result = CourseStatus.get(initialValue);
 		if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
@@ -164,6 +179,26 @@ public class StudyplanFactoryImpl extends EFactoryImpl implements StudyplanFacto
 	 * @generated
 	 */
 	public String convertCourseStatusToString(EDataType eDataType, Object instanceValue) {
+		return instanceValue == null ? null : instanceValue.toString();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Season createSeasonFromString(EDataType eDataType, String initialValue) {
+		Season result = Season.get(initialValue);
+		if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
+		return result;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertSeasonToString(EDataType eDataType, Object instanceValue) {
 		return instanceValue == null ? null : instanceValue.toString();
 	}
 

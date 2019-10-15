@@ -19,6 +19,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link studyplan.Program#getName <em>Name</em>}</li>
  *   <li>{@link studyplan.Program#getSemesters <em>Semesters</em>}</li>
  *   <li>{@link studyplan.Program#getSpecializations <em>Specializations</em>}</li>
+ *   <li>{@link studyplan.Program#getDepartment <em>Department</em>}</li>
  * </ul>
  *
  * @see studyplan.StudyplanPackage#getProgram()
@@ -93,5 +94,29 @@ public interface Program extends EObject {
 	 * @generated
 	 */
 	EList<Specialization> getSpecializations();
+
+	/**
+	 * Returns the value of the '<em><b>Department</b></em>' container reference.
+	 * It is bidirectional and its opposite is '{@link studyplan.Department#getPrograms <em>Programs</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Department</em>' container reference.
+	 * @see #setDepartment(Department)
+	 * @see studyplan.StudyplanPackage#getProgram_Department()
+	 * @see studyplan.Department#getPrograms
+	 * @model opposite="programs" transient="false"
+	 * @generated
+	 */
+	Department getDepartment();
+
+	/**
+	 * Sets the value of the '{@link studyplan.Program#getDepartment <em>Department</em>}' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Department</em>' container reference.
+	 * @see #getDepartment()
+	 * @generated
+	 */
+	void setDepartment(Department value);
 
 } // Program

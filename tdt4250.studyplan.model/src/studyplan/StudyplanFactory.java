@@ -67,6 +67,15 @@ public interface StudyplanFactory extends EFactory {
 	SemesterCourse createSemesterCourse();
 
 	/**
+	 * Returns a new object of class '<em>Department</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Department</em>'.
+	 * @generated
+	 */
+	Department createDepartment();
+
+	/**
 	 * Returns the package supported by this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

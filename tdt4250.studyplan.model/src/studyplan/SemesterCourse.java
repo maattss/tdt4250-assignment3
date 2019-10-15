@@ -48,22 +48,22 @@ public interface SemesterCourse extends EObject {
 	void setStatus(CourseStatus value);
 
 	/**
-	 * Returns the value of the '<em><b>Course</b></em>' containment reference.
+	 * Returns the value of the '<em><b>Course</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Course</em>' containment reference.
+	 * @return the value of the '<em>Course</em>' reference.
 	 * @see #setCourse(Course)
 	 * @see studyplan.StudyplanPackage#getSemesterCourse_Course()
-	 * @model containment="true"
+	 * @model
 	 * @generated
 	 */
 	Course getCourse();
 
 	/**
-	 * Sets the value of the '{@link studyplan.SemesterCourse#getCourse <em>Course</em>}' containment reference.
+	 * Sets the value of the '{@link studyplan.SemesterCourse#getCourse <em>Course</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Course</em>' containment reference.
+	 * @param value the new value of the '<em>Course</em>' reference.
 	 * @see #getCourse()
 	 * @generated
 	 */

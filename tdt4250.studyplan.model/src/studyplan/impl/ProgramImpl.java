@@ -16,8 +16,10 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
+import org.eclipse.emf.ecore.util.EcoreUtil;
 import org.eclipse.emf.ecore.util.InternalEList;
 
+import studyplan.Department;
 import studyplan.Program;
 import studyplan.Semester;
 import studyplan.Specialization;
@@ -35,6 +37,7 @@ import studyplan.StudyplanPackage;
  *   <li>{@link studyplan.impl.ProgramImpl#getName <em>Name</em>}</li>
  *   <li>{@link studyplan.impl.ProgramImpl#getSemesters <em>Semesters</em>}</li>
  *   <li>{@link studyplan.impl.ProgramImpl#getSpecializations <em>Specializations</em>}</li>
+ *   <li>{@link studyplan.impl.ProgramImpl#getDepartment <em>Department</em>}</li>
  * </ul>
  *
  * @generated
@@ -190,6 +193,63 @@ public class ProgramImpl extends MinimalEObjectImpl.Container implements Program
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public Department getDepartment() {
+		if (eContainerFeatureID() != StudyplanPackage.PROGRAM__DEPARTMENT) return null;
+		return (Department)eInternalContainer();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetDepartment(Department newDepartment, NotificationChain msgs) {
+		msgs = eBasicSetContainer((InternalEObject)newDepartment, StudyplanPackage.PROGRAM__DEPARTMENT, msgs);
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setDepartment(Department newDepartment) {
+		if (newDepartment != eInternalContainer() || (eContainerFeatureID() != StudyplanPackage.PROGRAM__DEPARTMENT && newDepartment != null)) {
+			if (EcoreUtil.isAncestor(this, newDepartment))
+				throw new IllegalArgumentException("Recursive containment not allowed for " + toString());
+			NotificationChain msgs = null;
+			if (eInternalContainer() != null)
+				msgs = eBasicRemoveFromContainer(msgs);
+			if (newDepartment != null)
+				msgs = ((InternalEObject)newDepartment).eInverseAdd(this, StudyplanPackage.DEPARTMENT__PROGRAMS, Department.class, msgs);
+			msgs = basicSetDepartment(newDepartment, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, StudyplanPackage.PROGRAM__DEPARTMENT, newDepartment, newDepartment));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case StudyplanPackage.PROGRAM__DEPARTMENT:
+				if (eInternalContainer() != null)
+					msgs = eBasicRemoveFromContainer(msgs);
+				return basicSetDepartment((Department)otherEnd, msgs);
+		}
+		return super.eInverseAdd(otherEnd, featureID, msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
@@ -197,8 +257,24 @@ public class ProgramImpl extends MinimalEObjectImpl.Container implements Program
 				return ((InternalEList<?>)getSemesters()).basicRemove(otherEnd, msgs);
 			case StudyplanPackage.PROGRAM__SPECIALIZATIONS:
 				return ((InternalEList<?>)getSpecializations()).basicRemove(otherEnd, msgs);
+			case StudyplanPackage.PROGRAM__DEPARTMENT:
+				return basicSetDepartment(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public NotificationChain eBasicRemoveFromContainerFeature(NotificationChain msgs) {
+		switch (eContainerFeatureID()) {
+			case StudyplanPackage.PROGRAM__DEPARTMENT:
+				return eInternalContainer().eInverseRemove(this, StudyplanPackage.DEPARTMENT__PROGRAMS, Department.class, msgs);
+		}
+		return super.eBasicRemoveFromContainerFeature(msgs);
 	}
 
 	/**
@@ -217,6 +293,8 @@ public class ProgramImpl extends MinimalEObjectImpl.Container implements Program
 				return getSemesters();
 			case StudyplanPackage.PROGRAM__SPECIALIZATIONS:
 				return getSpecializations();
+			case StudyplanPackage.PROGRAM__DEPARTMENT:
+				return getDepartment();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -244,6 +322,9 @@ public class ProgramImpl extends MinimalEObjectImpl.Container implements Program
 				getSpecializations().clear();
 				getSpecializations().addAll((Collection<? extends Specialization>)newValue);
 				return;
+			case StudyplanPackage.PROGRAM__DEPARTMENT:
+				setDepartment((Department)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -268,6 +349,9 @@ public class ProgramImpl extends MinimalEObjectImpl.Container implements Program
 			case StudyplanPackage.PROGRAM__SPECIALIZATIONS:
 				getSpecializations().clear();
 				return;
+			case StudyplanPackage.PROGRAM__DEPARTMENT:
+				setDepartment((Department)null);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -288,6 +372,8 @@ public class ProgramImpl extends MinimalEObjectImpl.Container implements Program
 				return semesters != null && !semesters.isEmpty();
 			case StudyplanPackage.PROGRAM__SPECIALIZATIONS:
 				return specializations != null && !specializations.isEmpty();
+			case StudyplanPackage.PROGRAM__DEPARTMENT:
+				return getDepartment() != null;
 		}
 		return super.eIsSet(featureID);
 	}

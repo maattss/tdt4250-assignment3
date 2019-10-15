@@ -4,12 +4,16 @@ package studyplan.impl;
 
 import org.eclipse.emf.common.notify.Notification;
 
+import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.ecore.EClass;
 
+import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
+import org.eclipse.emf.ecore.util.EcoreUtil;
 import studyplan.Course;
+import studyplan.Department;
 import studyplan.StudyplanPackage;
 
 /**
@@ -23,6 +27,7 @@ import studyplan.StudyplanPackage;
  *   <li>{@link studyplan.impl.CourseImpl#getCode <em>Code</em>}</li>
  *   <li>{@link studyplan.impl.CourseImpl#getName <em>Name</em>}</li>
  *   <li>{@link studyplan.impl.CourseImpl#getCredits <em>Credits</em>}</li>
+ *   <li>{@link studyplan.impl.CourseImpl#getDepartment <em>Department</em>}</li>
  * </ul>
  *
  * @generated
@@ -175,6 +180,91 @@ public class CourseImpl extends MinimalEObjectImpl.Container implements Course {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public Department getDepartment() {
+		if (eContainerFeatureID() != StudyplanPackage.COURSE__DEPARTMENT) return null;
+		return (Department)eInternalContainer();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetDepartment(Department newDepartment, NotificationChain msgs) {
+		msgs = eBasicSetContainer((InternalEObject)newDepartment, StudyplanPackage.COURSE__DEPARTMENT, msgs);
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setDepartment(Department newDepartment) {
+		if (newDepartment != eInternalContainer() || (eContainerFeatureID() != StudyplanPackage.COURSE__DEPARTMENT && newDepartment != null)) {
+			if (EcoreUtil.isAncestor(this, newDepartment))
+				throw new IllegalArgumentException("Recursive containment not allowed for " + toString());
+			NotificationChain msgs = null;
+			if (eInternalContainer() != null)
+				msgs = eBasicRemoveFromContainer(msgs);
+			if (newDepartment != null)
+				msgs = ((InternalEObject)newDepartment).eInverseAdd(this, StudyplanPackage.DEPARTMENT__COURSES, Department.class, msgs);
+			msgs = basicSetDepartment(newDepartment, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, StudyplanPackage.COURSE__DEPARTMENT, newDepartment, newDepartment));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case StudyplanPackage.COURSE__DEPARTMENT:
+				if (eInternalContainer() != null)
+					msgs = eBasicRemoveFromContainer(msgs);
+				return basicSetDepartment((Department)otherEnd, msgs);
+		}
+		return super.eInverseAdd(otherEnd, featureID, msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case StudyplanPackage.COURSE__DEPARTMENT:
+				return basicSetDepartment(null, msgs);
+		}
+		return super.eInverseRemove(otherEnd, featureID, msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public NotificationChain eBasicRemoveFromContainerFeature(NotificationChain msgs) {
+		switch (eContainerFeatureID()) {
+			case StudyplanPackage.COURSE__DEPARTMENT:
+				return eInternalContainer().eInverseRemove(this, StudyplanPackage.DEPARTMENT__COURSES, Department.class, msgs);
+		}
+		return super.eBasicRemoveFromContainerFeature(msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
@@ -184,6 +274,8 @@ public class CourseImpl extends MinimalEObjectImpl.Container implements Course {
 				return getName();
 			case StudyplanPackage.COURSE__CREDITS:
 				return getCredits();
+			case StudyplanPackage.COURSE__DEPARTMENT:
+				return getDepartment();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -204,6 +296,9 @@ public class CourseImpl extends MinimalEObjectImpl.Container implements Course {
 				return;
 			case StudyplanPackage.COURSE__CREDITS:
 				setCredits((Float)newValue);
+				return;
+			case StudyplanPackage.COURSE__DEPARTMENT:
+				setDepartment((Department)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -226,6 +321,9 @@ public class CourseImpl extends MinimalEObjectImpl.Container implements Course {
 			case StudyplanPackage.COURSE__CREDITS:
 				setCredits(CREDITS_EDEFAULT);
 				return;
+			case StudyplanPackage.COURSE__DEPARTMENT:
+				setDepartment((Department)null);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -244,6 +342,8 @@ public class CourseImpl extends MinimalEObjectImpl.Container implements Course {
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 			case StudyplanPackage.COURSE__CREDITS:
 				return credits != CREDITS_EDEFAULT;
+			case StudyplanPackage.COURSE__DEPARTMENT:
+				return getDepartment() != null;
 		}
 		return super.eIsSet(featureID);
 	}

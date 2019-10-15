@@ -15,39 +15,18 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link studyplan.Semester#getCode <em>Code</em>}</li>
  *   <li>{@link studyplan.Semester#getName <em>Name</em>}</li>
  *   <li>{@link studyplan.Semester#getCourses <em>Courses</em>}</li>
+ *   <li>{@link studyplan.Semester#getSeason <em>Season</em>}</li>
+ *   <li>{@link studyplan.Semester#getYear <em>Year</em>}</li>
  * </ul>
  *
  * @see studyplan.StudyplanPackage#getSemester()
  * @model annotation="http://www.eclipse.org/emf/2002/Ecore constraints='max30Credits'"
- *        annotation="http://www.eclipse.org/acceleo/query/1.0 max30Credits='self.courses'"
+ *        annotation="http://www.eclipse.org/acceleo/query/1.0 max30Credits='self.courses.course.credits-&gt;sum() &lt;= 30.0'"
  * @generated
  */
 public interface Semester extends EObject {
-	/**
-	 * Returns the value of the '<em><b>Code</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Code</em>' attribute.
-	 * @see #setCode(String)
-	 * @see studyplan.StudyplanPackage#getSemester_Code()
-	 * @model
-	 * @generated
-	 */
-	String getCode();
-
-	/**
-	 * Sets the value of the '{@link studyplan.Semester#getCode <em>Code</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Code</em>' attribute.
-	 * @see #getCode()
-	 * @generated
-	 */
-	void setCode(String value);
-
 	/**
 	 * Returns the value of the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
@@ -81,5 +60,42 @@ public interface Semester extends EObject {
 	 * @generated
 	 */
 	EList<SemesterCourse> getCourses();
+
+	/**
+	 * Returns the value of the '<em><b>Season</b></em>' attribute.
+	 * The literals are from the enumeration {@link studyplan.Season}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Season</em>' attribute.
+	 * @see studyplan.Season
+	 * @see #setSeason(Season)
+	 * @see studyplan.StudyplanPackage#getSemester_Season()
+	 * @model
+	 * @generated
+	 */
+	Season getSeason();
+
+	/**
+	 * Sets the value of the '{@link studyplan.Semester#getSeason <em>Season</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Season</em>' attribute.
+	 * @see studyplan.Season
+	 * @see #getSeason()
+	 * @generated
+	 */
+	void setSeason(Season value);
+
+	/**
+	 * Returns the value of the '<em><b>Year</b></em>' attribute list.
+	 * The list contents are of type {@link java.lang.Integer}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Year</em>' attribute list.
+	 * @see studyplan.StudyplanPackage#getSemester_Year()
+	 * @model required="true" upper="5"
+	 * @generated
+	 */
+	EList<Integer> getYear();
 
 } // Semester

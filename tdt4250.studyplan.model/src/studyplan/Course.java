@@ -16,6 +16,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link studyplan.Course#getCode <em>Code</em>}</li>
  *   <li>{@link studyplan.Course#getName <em>Name</em>}</li>
  *   <li>{@link studyplan.Course#getCredits <em>Credits</em>}</li>
+ *   <li>{@link studyplan.Course#getDepartment <em>Department</em>}</li>
  * </ul>
  *
  * @see studyplan.StudyplanPackage#getCourse()
@@ -88,5 +89,29 @@ public interface Course extends EObject {
 	 * @generated
 	 */
 	void setCredits(float value);
+
+	/**
+	 * Returns the value of the '<em><b>Department</b></em>' container reference.
+	 * It is bidirectional and its opposite is '{@link studyplan.Department#getCourses <em>Courses</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Department</em>' container reference.
+	 * @see #setDepartment(Department)
+	 * @see studyplan.StudyplanPackage#getCourse_Department()
+	 * @see studyplan.Department#getCourses
+	 * @model opposite="courses" transient="false"
+	 * @generated
+	 */
+	Department getDepartment();
+
+	/**
+	 * Sets the value of the '{@link studyplan.Course#getDepartment <em>Department</em>}' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Department</em>' container reference.
+	 * @see #getDepartment()
+	 * @generated
+	 */
+	void setDepartment(Department value);
 
 } // Course

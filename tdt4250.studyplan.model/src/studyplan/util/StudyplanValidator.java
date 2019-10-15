@@ -96,8 +96,12 @@ public class StudyplanValidator extends EObjectValidator {
 				return validateCourse((Course)value, diagnostics, context);
 			case StudyplanPackage.SEMESTER_COURSE:
 				return validateSemesterCourse((SemesterCourse)value, diagnostics, context);
+			case StudyplanPackage.DEPARTMENT:
+				return validateDepartment((Department)value, diagnostics, context);
 			case StudyplanPackage.COURSE_STATUS:
 				return validateCourseStatus((CourseStatus)value, diagnostics, context);
+			case StudyplanPackage.SEASON:
+				return validateSeason((Season)value, diagnostics, context);
 			default:
 				return true;
 		}
@@ -137,7 +141,7 @@ public class StudyplanValidator extends EObjectValidator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected static final String SEMESTER__MAX30_CREDITS__EEXPRESSION = "self.courses";
+	protected static final String SEMESTER__MAX30_CREDITS__EEXPRESSION = "self.courses.course.credits->sum() <= 30.0";
 
 	/**
 	 * Validates the max30Credits constraint of '<em>Semester</em>'.
@@ -227,7 +231,25 @@ public class StudyplanValidator extends EObjectValidator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public boolean validateDepartment(Department department, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return validate_EveryDefaultConstraint(department, diagnostics, context);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public boolean validateCourseStatus(CourseStatus courseStatus, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return true;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateSeason(Season season, DiagnosticChain diagnostics, Map<Object, Object> context) {
 		return true;
 	}
 

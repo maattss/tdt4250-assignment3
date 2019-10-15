@@ -3,8 +3,6 @@
 package studyplan.impl;
 
 import org.eclipse.emf.common.notify.Notification;
-import org.eclipse.emf.common.notify.NotificationChain;
-
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
@@ -52,7 +50,7 @@ public class SemesterCourseImpl extends MinimalEObjectImpl.Container implements 
 	protected CourseStatus status = STATUS_EDEFAULT;
 
 	/**
-	 * The cached value of the '{@link #getCourse() <em>Course</em>}' containment reference.
+	 * The cached value of the '{@link #getCourse() <em>Course</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getCourse()
@@ -107,6 +105,14 @@ public class SemesterCourseImpl extends MinimalEObjectImpl.Container implements 
 	 * @generated
 	 */
 	public Course getCourse() {
+		if (course != null && course.eIsProxy()) {
+			InternalEObject oldCourse = (InternalEObject)course;
+			course = (Course)eResolveProxy(oldCourse);
+			if (course != oldCourse) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, StudyplanPackage.SEMESTER_COURSE__COURSE, oldCourse, course));
+			}
+		}
 		return course;
 	}
 
@@ -115,14 +121,8 @@ public class SemesterCourseImpl extends MinimalEObjectImpl.Container implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetCourse(Course newCourse, NotificationChain msgs) {
-		Course oldCourse = course;
-		course = newCourse;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, StudyplanPackage.SEMESTER_COURSE__COURSE, oldCourse, newCourse);
-			if (msgs == null) msgs = notification; else msgs.add(notification);
-		}
-		return msgs;
+	public Course basicGetCourse() {
+		return course;
 	}
 
 	/**
@@ -131,31 +131,10 @@ public class SemesterCourseImpl extends MinimalEObjectImpl.Container implements 
 	 * @generated
 	 */
 	public void setCourse(Course newCourse) {
-		if (newCourse != course) {
-			NotificationChain msgs = null;
-			if (course != null)
-				msgs = ((InternalEObject)course).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - StudyplanPackage.SEMESTER_COURSE__COURSE, null, msgs);
-			if (newCourse != null)
-				msgs = ((InternalEObject)newCourse).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - StudyplanPackage.SEMESTER_COURSE__COURSE, null, msgs);
-			msgs = basicSetCourse(newCourse, msgs);
-			if (msgs != null) msgs.dispatch();
-		}
-		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, StudyplanPackage.SEMESTER_COURSE__COURSE, newCourse, newCourse));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
-		switch (featureID) {
-			case StudyplanPackage.SEMESTER_COURSE__COURSE:
-				return basicSetCourse(null, msgs);
-		}
-		return super.eInverseRemove(otherEnd, featureID, msgs);
+		Course oldCourse = course;
+		course = newCourse;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, StudyplanPackage.SEMESTER_COURSE__COURSE, oldCourse, course));
 	}
 
 	/**
@@ -169,7 +148,8 @@ public class SemesterCourseImpl extends MinimalEObjectImpl.Container implements 
 			case StudyplanPackage.SEMESTER_COURSE__STATUS:
 				return getStatus();
 			case StudyplanPackage.SEMESTER_COURSE__COURSE:
-				return getCourse();
+				if (resolve) return getCourse();
+				return basicGetCourse();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}

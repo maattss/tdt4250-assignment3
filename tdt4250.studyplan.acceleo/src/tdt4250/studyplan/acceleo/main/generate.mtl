@@ -1,0 +1,19 @@
+[comment encoding = UTF-8 /]
+[module generate('platform:/plugin/tdt4250.studyplan.model/model/studyplan.ecore', 'http://www.eclipse.org/emf/2002/Ecore')/]
+
+[template public generate(department : Department)]
+	[comment @main /]
+	[file (department.name.concat('.html'), false, 'UTF-8')]
+<html>
+<head>
+	<title>[department.name/]</title>
+	<meta charset="utf-8"/>
+</head>
+<body>
+		[for (course : Course | department.courses)]
+			<h2>[course.code/]<h2/>
+		[/for]
+</body></html>
+	[/file]
+[/template]
+
