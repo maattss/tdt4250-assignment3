@@ -3,15 +3,26 @@
 
 [template public generate(department : Department)]
 	[comment @main /]
-	[file (department.name.concat('.html'), false, 'UTF-8')]
+	[file (('department_' + department.name.replaceAll('\\s+','_').toLowerCase() + '.html'), false, 'UTF-8')]
 <html>
 <head>
 	<title>[department.name/]</title>
 	<meta charset="utf-8"/>
 </head>
 <body>
-		[for (course : Course | department.courses)]
-			<h2>[course.code/]<h2/>
+	<h1>Study plan</h1>
+		[for (program : Program | department.programs)]
+			<h2>[program.name/] ([program.code/])<h3/>
+			[for (specialization : Specialization | program.specializations)]
+				<h3>[specialization.name/]<h4/>
+				[for (semester : Semester | specialization.semesters)]
+				<h4>[semester.name/]<h4/>
+					[for (semesterCourse: SemesterCourse | semester.courses)]
+					<p>[semesterCourse.course.name/]<p/>
+
+					[/for]
+				[/for]
+			[/for]
 		[/for]
 </body></html>
 	[/file]
