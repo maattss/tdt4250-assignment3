@@ -45,6 +45,12 @@
   <courses code="TDT4900"
       name="Computer Science, Master's Thesis"
       credits="30.0"/>
+  <courses code="TDT4137"
+      name="Cognitive Architectures"
+      credits="7.5"/>
+  <courses code="TDT4117"
+      name="Information Retrieval"
+      credits="7.5"/>
   <programs
       code="MIDT"
       name="Msc - 2 year - Computer Science">
@@ -97,19 +103,46 @@
       <semesters
           name="Semester 1"
           season="FALL">
+        <courses
+            course="//@courses.2"/>
+        <courses
+            course="//@courses.14"/>
+        <courses
+        	status="ELECTIVE"
+            course="//@courses.5"/>
+        <courses
+        	status="ELECTIVE"
+            course="//@courses.6"/>
         <year>1</year>
       </semesters>
       <semesters
           name="Semester 2">
+        <courses
+            course="//@courses.7"/>
+        <courses
+            status="ELECTIVE"
+            course="//@courses.4"/>
+        <courses
+        	status="ELECTIVE"
+            course="//@courses.8"/>
         <year>1</year>
       </semesters>
       <semesters
           name="Semester 3"
           season="FALL">
+        <courses
+            course="//@courses.10"/>
+        <courses
+            course="//@courses.11"/>
+        <courses
+            status="ELECTIVE"
+            course="//@courses.9"/>
         <year>2</year>
       </semesters>
       <semesters
           name="Semester 4">
+        <courses
+            course="//@courses.12"/>
         <year>2</year>
       </semesters>
     </specializations>
