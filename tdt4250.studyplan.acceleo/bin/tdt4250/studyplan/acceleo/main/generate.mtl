@@ -6,25 +6,57 @@
 	[file (('department_' + department.name.replaceAll('\\s+','_').toLowerCase() + '.html'), false, 'UTF-8')]
 <html>
 <head>
-	<title>[department.name/]</title>
+	<title>Study plans - Department of [department.name/]</title>
 	<meta charset="utf-8"/>
 </head>
 <body>
-	<h1>Study plan</h1>
-		[for (program : Program | department.programs)]
-			<h2>[program.name/] ([program.code/])<h3/>
-			[for (specialization : Specialization | program.specializations)]
-				<h3>[specialization.name/]<h4/>
-				[for (semester : Semester | specialization.semesters)]
-				<h4>[semester.name/]<h4/>
-					[for (semesterCourse: SemesterCourse | semester.courses)]
-					<p>[semesterCourse.course.name/]<p/>
-
-					[/for]
-				[/for]
-			[/for]
-		[/for]
-</body></html>
+	<h1>Study plans for Department of [department.name/]</h1>
+	[for (program : Program | department.programs)]
+		[generateProgram(program)/]
+	[/for]
+</body>
+</html>
 	[/file]
 [/template]
+
+[template public generateProgram(program : Program)]
+<h2>[program.name/] ([program.code/])<h2/>
+[for (specialization : Specialization | program.specializations)]
+	[generateSpecialization(specialization)/]
+[/for]
+[/template]
+
+[template public generateSpecialization(specialization : Specialization)]
+<hr/>
+<h3>[specialization.name/]<h3/>
+[for (semester : Semester | specialization.semesters)]
+	[generateSemester(semester)/]
+[/for]
+[/template]
+
+[template public generateSemester(semester : Semester)]
+<h4>[semester.year/]. year [semester.season/]</h4>
+<table>
+	<thead>
+		<tr>
+	    	<th>Code</th>
+			<th>Name</th>
+			<th>Credits</th>
+			<th>Status</th>
+	  	</tr>
+	</thead>
+	<tbody>
+		[for (semesterCourse : SemesterCourse | semester.courses)]
+			<tr>
+				<td>[semesterCourse.course.code/]</td>
+				<td>[semesterCourse.course.name/]</td>
+				<td>[semesterCourse.course.credits/]</td>
+				<td>[semesterCourse.status/]</td>
+			</tr>
+		[/for]
+		
+	</tbody>
+<table/>
+[/template]
+
 
