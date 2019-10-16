@@ -1,302 +1,146 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<tdt4250.studyplan:Department
-    xmi:version="2.0"
-    xmlns:xmi="http://www.omg.org/XMI"
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xmlns:tdt4250.studyplan="platform:/plugin/tdt4250.studyplan.model/model/studyplan.ecore"
-    xsi:schemaLocation="platform:/plugin/tdt4250.studyplan.model/model/studyplan.ecore studyplan.ecore"
-    name="Computer Science">
-  <courses code="TDT4250"
-      name="Advanced Software Design"
-      credits="7.5"/>
-  <courses code="IT3402"
-      name="Design of Graphical User Interface"
-      credits="7.5"/>
-  <courses code="TDT4136"
-      name="Introduction to Artificial Intelligence"
-      credits="7.5"/>
-  <courses code="TDT4117"
-      name="Information Systems"
-      credits="7.5"/>
-  <courses code="TTM4135"
-      name="Information Security"
-      credits="7.5"/>
-  <courses code="TDT4242"
-      name="Advanced Software Engineering"
-      credits="7.5"/>
-  <courses code="TDT4250"
-      name="Software Architecture"
-      credits="7.5"/>
-  <courses code="TDT1234"
-      name="Experts in Teamwork (EiT)"
-      credits="15.0"/>
-  <courses code="TDT4245"
-      name="Cooperation Technology and Social Media"
-      credits="7.5"/>
-  <courses code="TDT4252"
-      name="Enterprise Architecture for Enterprise Innovation"
-      credits="7.5"/>
-  <courses code="TDT4501"
-      name="Computer Science, Specialization Project"
-      credits="15.0"/>
-  <courses code="TDT4506"
-      name="Computer Science, Specialization Course"
-      credits="7.5"/>
-  <courses code="TDT4900"
-      name="Computer Science, Master's Thesis"
-      credits="30.0"/>
-  <courses code="TDT4137"
-      name="Cognitive Architectures"
-      credits="7.5"/>
-  <courses code="TDT4117"
-      name="Information Retrieval"
-      credits="7.5"/>
-  <courses code="TDT4165"
-      name="Programming Language"
-      credits="7.5"/>
-  <courses code="TDT4237"
-      name="Software Security"
-      credits="7.5"/>
-  <courses code="IT3901"
-      name="Informatics Postgraduate Thesis: Software"
-      credits="30.0"/>
-  <courses code="TDT4195"
-      name="Visual Computing Fundamentals"
-      credits="7.5"/>
-  <courses code="TDT4245"
-      name="Cooperation Technology and Social Media"
-      credits="7.5"/>
-  <courses code="IT3906"
-      name="Informatics Postgraduate Thesis: Interaction Design, Game and Learning Technology"
-      credits="30.0"/>
-  <programs
-      code="MIDT"
-      name="Msc - 2 year - Computer Science">
-    <specializations
-        name="Software Development">
-      <semesters
-          name="Semester 1"
-          season="FALL">
-        <courses
-            status="ELECTIVE"
-            course="//@courses.0"/>
-        <courses
-            status="ELECTIVE"
-            course="//@courses.1"/>
-        <courses
-            course="//@courses.2"/>
-        <courses
-            course="//@courses.3"/>
+<tdt4250.studyplan:Department xmlns:tdt4250.studyplan="platform:/plugin/tdt4250.studyplan.model/model/studyplan.ecore" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmi:version="2.0" xsi:schemaLocation="platform:/plugin/tdt4250.studyplan.model/model/studyplan.ecore studyplan.ecore" name="Computer Science">
+  <courses code="TDT4250" name="Advanced Software Design" credits="7.5" />
+  <courses code="IT3402" name="Design of Graphical User Interface" credits="7.5" />
+  <courses code="TDT4136" name="Introduction to Artificial Intelligence" credits="7.5" />
+  <courses code="TDT4117" name="Information Systems" credits="7.5" />
+  <courses code="TTM4135" name="Information Security" credits="7.5" />
+  <courses code="TDT4242" name="Advanced Software Engineering" credits="7.5" />
+  <courses code="TDT4250" name="Software Architecture" credits="7.5" />
+  <courses code="TDT1234" name="Experts in Teamwork (EiT)" credits="15.0" />
+  <courses code="TDT4245" name="Cooperation Technology and Social Media" credits="7.5" />
+  <courses code="TDT4252" name="Enterprise Architecture for Enterprise Innovation" credits="7.5" />
+  <courses code="TDT4501" name="Computer Science, Specialization Project" credits="15.0" />
+  <courses code="TDT4506" name="Computer Science, Specialization Course" credits="7.5" />
+  <courses code="TDT4900" name="Computer Science, Master's Thesis" credits="30.0" />
+  <courses code="TDT4137" name="Cognitive Architectures" credits="7.5" />
+  <courses code="TDT4117" name="Information Retrieval" credits="7.5" />
+  <courses code="TDT4165" name="Programming Language" credits="7.5" />
+  <courses code="TDT4237" name="Software Security" credits="7.5" />
+  <courses code="IT3901" name="Informatics Postgraduate Thesis: Software" credits="30.0" />
+  <courses code="TDT4195" name="Visual Computing Fundamentals" credits="7.5" />
+  <courses code="TDT4245" name="Cooperation Technology and Social Media" credits="7.5" />
+  <courses code="IT3906" name="Informatics Postgraduate Thesis: Interaction Design, Game and Learning Technology" credits="30.0" />
+  <programs code="MIDT" name="Msc - 2 year - Computer Science">
+    <specializations name="Software Development">
+      <semesters name="Semester 1" season="FALL">
+        <courses status="ELECTIVE" course="//@courses.0" />
+        <courses status="ELECTIVE" course="//@courses.1" />
+        <courses course="//@courses.2" />
+        <courses course="//@courses.3" />
         <year>1</year>
       </semesters>
-      <semesters
-          name="Semester 2">
-        <courses
-            status="ELECTIVE"
-            course="//@courses.5"/>
-        <courses
-            course="//@courses.0"/>
-        <courses
-            course="//@courses.7"/>
+      <semesters name="Semester 2">
+        <courses status="ELECTIVE" course="//@courses.5" />
+        <courses course="//@courses.0" />
+        <courses course="//@courses.7" />
         <year>1</year>
       </semesters>
-      <semesters
-          name="Semester 3"
-          season="FALL">
-        <courses
-            course="//@courses.10"/>
-        <courses
-            course="//@courses.11"/>
+      <semesters name="Semester 3" season="FALL">
+        <courses course="//@courses.10" />
+        <courses course="//@courses.11" />
         <year>2</year>
       </semesters>
-      <semesters
-          name="Semester 4">
-        <courses
-            course="//@courses.12"/>
+      <semesters name="Semester 4">
+        <courses course="//@courses.12" />
         <year>2</year>
       </semesters>
     </specializations>
-    <specializations
-        name="Artificial Intelligence">
-      <semesters
-          name="Semester 1"
-          season="FALL">
-        <courses
-            course="//@courses.2"/>
-        <courses
-            course="//@courses.14"/>
-        <courses
-            status="ELECTIVE"
-            course="//@courses.5"/>
-        <courses
-            status="ELECTIVE"
-            course="//@courses.6"/>
+    <specializations name="Artificial Intelligence">
+      <semesters name="Semester 1" season="FALL">
+        <courses course="//@courses.2" />
+        <courses course="//@courses.14" />
+        <courses status="ELECTIVE" course="//@courses.5" />
+        <courses status="ELECTIVE" course="//@courses.6" />
         <year>1</year>
       </semesters>
-      <semesters
-          name="Semester 2">
-        <courses
-            course="//@courses.7"/>
-        <courses
-            status="ELECTIVE"
-            course="//@courses.4"/>
-        <courses
-            status="ELECTIVE"
-            course="//@courses.8"/>
+      <semesters name="Semester 2">
+        <courses course="//@courses.7" />
+        <courses status="ELECTIVE" course="//@courses.4" />
+        <courses status="ELECTIVE" course="//@courses.8" />
         <year>1</year>
       </semesters>
-      <semesters
-          name="Semester 3"
-          season="FALL">
-        <courses
-            course="//@courses.10"/>
-        <courses
-            course="//@courses.11"/>
-        <courses
-            status="ELECTIVE"
-            course="//@courses.9"/>
+      <semesters name="Semester 3" season="FALL">
+        <courses course="//@courses.10" />
+        <courses course="//@courses.11" />
+        <courses status="ELECTIVE" course="//@courses.9" />
         <year>2</year>
       </semesters>
-      <semesters
-          name="Semester 4">
-        <courses
-            course="//@courses.12"/>
+      <semesters name="Semester 4">
+        <courses course="//@courses.12" />
         <year>2</year>
       </semesters>
     </specializations>
-    <specializations
-        name="Databases and Search">
-      <semesters
-          name="Semester 1"
-          season="FALL">
-        <courses
-            course="//@courses.1"/>
-        <courses
-            course="//@courses.13"/>
-        <courses
-            status="ELECTIVE"
-            course="//@courses.8"/>
-        <courses
-            status="ELECTIVE"
-            course="//@courses.9"/>
+    <specializations name="Databases and Search">
+      <semesters name="Semester 1" season="FALL">
+        <courses course="//@courses.1" />
+        <courses course="//@courses.13" />
+        <courses status="ELECTIVE" course="//@courses.8" />
+        <courses status="ELECTIVE" course="//@courses.9" />
         <year>1</year>
       </semesters>
-      <semesters
-          name="Semester 2">
-        <courses
-            course="//@courses.7"/>
-        <courses
-            status="ELECTIVE"
-            course="//@courses.14"/>
-        <courses
-            status="ELECTIVE"
-            course="//@courses.6"/>
+      <semesters name="Semester 2">
+        <courses course="//@courses.7" />
+        <courses status="ELECTIVE" course="//@courses.14" />
+        <courses status="ELECTIVE" course="//@courses.6" />
         <year>1</year>
       </semesters>
-      <semesters
-          name="Semester 3"
-          season="FALL">
-        <courses
-            course="//@courses.10"/>
-        <courses
-            course="//@courses.11"/>
-        <courses
-            status="ELECTIVE"
-            course="//@courses.3"/>
+      <semesters name="Semester 3" season="FALL">
+        <courses course="//@courses.10" />
+        <courses course="//@courses.11" />
+        <courses status="ELECTIVE" course="//@courses.3" />
         <year>2</year>
       </semesters>
-      <semesters
-          name="Semester 4">
-        <courses
-            course="//@courses.12"/>
+      <semesters name="Semester 4">
+        <courses course="//@courses.12" />
         <year>2</year>
       </semesters>
     </specializations>
   </programs>
-  <programs
-      code="MSIT"
-      name="Msc - 2 year - Informatics">
-    <specializations
-        name="Software">
-      <semesters
-          name="Semester 1"
-          season="FALL">
-        <courses
-            course="//@courses.3"/>
-        <courses
-            course="//@courses.0"/>
-        <courses
-            status="ELECTIVE"
-            course="//@courses.9"/>
-        <courses
-            status="ELECTIVE"
-            course="//@courses.15"/>
+  <programs code="MSIT" name="Msc - 2 year - Informatics">
+    <specializations name="Software">
+      <semesters name="Semester 1" season="FALL">
+        <courses course="//@courses.3" />
+        <courses course="//@courses.0" />
+        <courses status="ELECTIVE" course="//@courses.9" />
+        <courses status="ELECTIVE" course="//@courses.15" />
         <year>1</year>
       </semesters>
-      <semesters
-          name="Semester 2">
-        <courses
-            course="//@courses.16"/>
-        <courses
-            course="//@courses.6"/>
-        <courses
-            course="//@courses.7"/>
+      <semesters name="Semester 2">
+        <courses course="//@courses.16" />
+        <courses course="//@courses.6" />
+        <courses course="//@courses.7" />
         <year>1</year>
       </semesters>
-      <semesters
-          name="Semester 3"
-          season="FALL">
-        <courses
-            course="//@courses.17"/>
+      <semesters name="Semester 3" season="FALL">
+        <courses course="//@courses.17" />
         <year>2</year>
       </semesters>
-      <semesters
-          name="Semester 4">
-        <courses
-            course="//@courses.17"/>
+      <semesters name="Semester 4">
+        <courses course="//@courses.17" />
         <year>2</year>
       </semesters>
     </specializations>
-    <specializations
-        name="Interaction Design, Game and Learning Technology">
-      <semesters
-          name="Semester 1"
-          season="FALL">
-        <courses
-            status="ELECTIVE"
-            course="//@courses.13"/>
-        <courses
-            status="ELECTIVE"
-            course="//@courses.2"/>
-        <courses
-            course="//@courses.1"/>
-        <courses
-            status="ELECTIVE"
-            course="//@courses.18"/>
+    <specializations name="Interaction Design, Game and Learning Technology">
+      <semesters name="Semester 1" season="FALL">
+        <courses status="ELECTIVE" course="//@courses.13" />
+        <courses status="ELECTIVE" course="//@courses.2" />
+        <courses course="//@courses.1" />
+        <courses status="ELECTIVE" course="//@courses.18" />
         <year>1</year>
       </semesters>
-      <semesters
-          name="Semester 2">
-        <courses
-            course="//@courses.7"/>
-        <courses
-            status="ELECTIVE"
-            course="//@courses.6"/>
-        <courses
-            course="//@courses.19"/>
+      <semesters name="Semester 2">
+        <courses course="//@courses.7" />
+        <courses status="ELECTIVE" course="//@courses.6" />
+        <courses course="//@courses.19" />
         <year>1</year>
       </semesters>
-      <semesters
-          name="Semester 3"
-          season="FALL">
-        <courses
-            course="//@courses.20"/>
+      <semesters name="Semester 3" season="FALL">
+        <courses course="//@courses.20" />
         <year>2</year>
       </semesters>
-      <semesters
-          name="Semester 4">
-        <courses
-            course="//@courses.20"/>
+      <semesters name="Semester 4">
+        <courses course="//@courses.20" />
         <year>2</year>
       </semesters>
     </specializations>
