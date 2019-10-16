@@ -4,14 +4,14 @@
 
 Model To Text (M2T) transformation of Ecore model to HTML using Acceleo.
 
-- Ecore model project: tdt4250.studyplan.model
-- Acceleo project, transformation: tdt4250.studyplan.acceleo
+- Ecore model project: [tdt4250.studyplan.model](https://github.com/maattss/tdt4250-assignment3/tree/master/tdt4250.studyplan.model)
+- Acceleo project, transformation: [tdt4250.studyplan.acceleo](https://github.com/maattss/tdt4250-assignment3/tree/master/tdt4250.studyplan.acceleo)
 
-Generated HTML-file located in tdt4250.studyplan.acceleo/generated folder
+Generated HTML-file located in [tdt4250.studyplan.acceleo/generated](https://github.com/maattss/tdt4250-assignment3/tree/master/tdt4250.studyplan.acceleo/generated) folder
 
 ## Development and running transformation
 
-How the model is transformed from Ecore to HTMl is described in the generate.mtl file. Edit this file if you want to change how the transforamtion is done.
+How the model is transformed from Ecore to HTMl is described in the [generate.mtl](./tdt4250.studyplan.acceleo/src/tdt4250/studyplan/acceleo/main/generate.mtl) file. Edit this file if you want to change how the transforamtion is done.
 To re-generate HTML file, using this transformation, run the generate-mtl file. In order for the generation to work properly specify these run configurations:
 
 - Right-click generate.mtl file, 'Run-As', 'Run Configurations...'
