@@ -20,6 +20,7 @@
 [/template]
 
 [template public generateProgram(program : Program)]
+<hr/>
 <h2>[program.name/] ([program.code/])<h2/>
 [for (specialization : Specialization | program.specializations)]
 	[generateSpecialization(specialization)/]
