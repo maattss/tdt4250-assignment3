@@ -62,4 +62,4 @@ The Sample.xmi describes two studyprograms from the Department of Computer Scien
 
 ## HTML rendered screenshot
 
-<img src="https://i.imgur.com/n2xFHJJ.png" width="100" height="100">
+<img src="https://i.imgur.com/n2xFHJJ.png" width="50%">
