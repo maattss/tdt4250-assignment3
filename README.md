@@ -12,31 +12,12 @@ Every courses included in a semester can be mandatory or elective.
 - Each course need to be at least 5 credits (manually written validation).
 
 ## Model structure
-
-![plant UML model](https://i.imgur.com/2qp510p.png)
+![plant UML model](https://i.imgur.com/q3alEsn.png)
 
 ## Sample
-**Sample.xmi updated for assignment 3** 
-The Sample.xmi file includes an example of a studyprogram with a specialization, 2 semesters and 7 courses. Some of the courses are mandatory and some are elective.
-
-- Program: 2 year Msc Computer Science
-  - Specialization: Software Development
-    - Semester: Semester 1
-      - SemesterCourse: _ELECTIVE_
-        - Course: Advanced Software Design
-      - SemesterCourse: _ELECTIVE_
-        - Course: Graphical User Interface
-      - SemesterCourse: _MANDATORY_
-        - Course: Introduction to Artificial Intelligence
-      - SemesterCourse: _MANDATORY_
-        - Course: Information Systems
-    - Semester: Semester 2
-      - SemesterCourse: _ELECTIVE_
-        - Course: Information Security
-      - SemesterCourse: _ELECTIVE_
-        - Course: Advanced Software Enginering
-      - SemesterCourse: _ELECTIVE_
-        - Course: Software Architecture
+The Samle.xmi describes two studyprograms from the Department of Computer Science, 
+Msc - 2 year - Computer Science (MIDT) and Msc - 2 year - Informatics (MSIT).
+Each program include some specializations with semesters and courses associated with these.
 
 ## Model impovements for assignment 3
 
