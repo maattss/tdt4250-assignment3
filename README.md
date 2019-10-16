@@ -1,7 +1,5 @@
 # TDT4250 - Advanced Software Engineering - Assignment 3
 
-## Content
-
 Model To Text (M2T) transformation of Ecore model to HTML using Acceleo.
 
 - Ecore project (model): [tdt4250.studyplan.model](https://github.com/maattss/tdt4250-assignment3/tree/master/tdt4250.studyplan.model)
