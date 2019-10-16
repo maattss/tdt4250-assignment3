@@ -4,23 +4,25 @@
 
 Model To Text (M2T) transformation of Ecore model to HTML using Acceleo.
 
-- Ecore model project: [tdt4250.studyplan.model](https://github.com/maattss/tdt4250-assignment3/tree/master/tdt4250.studyplan.model)
-- Acceleo project, transformation: [tdt4250.studyplan.acceleo](https://github.com/maattss/tdt4250-assignment3/tree/master/tdt4250.studyplan.acceleo)
+- Ecore project (model): [tdt4250.studyplan.model](https://github.com/maattss/tdt4250-assignment3/tree/master/tdt4250.studyplan.model)
+- Acceleo project (transformation): [tdt4250.studyplan.acceleo](https://github.com/maattss/tdt4250-assignment3/tree/master/tdt4250.studyplan.acceleo)
 
 Generated HTML-file located in [tdt4250.studyplan.acceleo/generated](https://github.com/maattss/tdt4250-assignment3/tree/master/tdt4250.studyplan.acceleo/generated) folder
 
 ## Development and running transformation
 
-How the model is transformed from Ecore to HTMl is described in the [generate.mtl](./tdt4250.studyplan.acceleo/src/tdt4250/studyplan/acceleo/main/generate.mtl) file. Edit this file if you want to change how the transforamtion is done.
-To re-generate HTML file, using this transformation, run the generate-mtl file. In order for the generation to work properly specify these run configurations:
+How the model is transformed from Ecore to HTMl is described in the [generate.mtl](./tdt4250.studyplan.acceleo/src/tdt4250/studyplan/acceleo/main/generate.mtl) file. Edit this file if you want to change how the transformation is done.
+
+To re-generate HTML file run, the generate.mtl file using this procedure and configurations:
 
 - Right-click generate.mtl file, 'Run-As', 'Run Configurations...'
 - Select 'Acceleo Application' and click 'New launch configuration'
-- Name: "Studyplan generate.mtl"
-- Project: "tdt4250.studyplan.acceleo"
-- Main class: "tdt4250.studyplan.acceleo.main.Generate"
-- Model: "/tdt4250.studyplan.model/model/Sample.xmi"
-- Target: "/tdt4250.studyplan.acceleo/generated/"
+- Name: 'Studyplan generate.mtl'
+- Project: 'tdt4250.studyplan.acceleo'
+- Main class: 'tdt4250.studyplan.acceleo.main.Generate'
+- Model: '/tdt4250.studyplan.model/model/Sample.xmi'
+- Target: '/tdt4250.studyplan.acceleo/generated/'
+- Click 'Run'
 
 ## Constraints
 
@@ -29,17 +31,17 @@ To re-generate HTML file, using this transformation, run the generate-mtl file. 
 
 ## Model structure
 
-Study plan (program) with semesters, courses and specializations.
-A program includes multiple semesters with optional specializations (single or multiple).
-Every courses included in a semester can be mandatory or elective.
+Department with courses and programs (study plans).
+A program includes multiple semesters and courses with optional specializations (single or multiple).
+A courses included in a semester can be mandatory or elective.
 
 ### Plant UML diagram
 
 ![plant UML model](https://i.imgur.com/q3alEsn.png)
 
-## Model impovements from assignment 1
+## Model improvements from assignment 1
 
-Based on feedback from assignment 1, the following model improvements have been done:
+Based on feedback, the following model improvements have been done:
 
 - Add a top level object i.e. Department where courses are contained
 - Add a datatype for spring/fall in semesters
@@ -58,4 +60,6 @@ The Sample.xmi describes two studyprograms from the Department of Computer Scien
   - Software
   - Interaction Design, Game and Learning Technology
 
-## Transformation
+## HTML rendered screenshot
+
+<img src="https://i.imgur.com/n2xFHJJ.png" width="100" height="100">
