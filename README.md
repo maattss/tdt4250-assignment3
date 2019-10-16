@@ -13,14 +13,14 @@ How the model is transformed from Ecore to HTMl is described in the [generate.mt
 
 To re-generate HTML file run, the generate.mtl file using this procedure and configurations:
 
-- Right-click generate.mtl file, 'Run-As', 'Run Configurations...'
-- Select 'Acceleo Application' and click 'New launch configuration'
-- Name: 'Studyplan generate.mtl'
-- Project: 'tdt4250.studyplan.acceleo'
-- Main class: 'tdt4250.studyplan.acceleo.main.Generate'
-- Model: '/tdt4250.studyplan.model/model/Sample.xmi'
-- Target: '/tdt4250.studyplan.acceleo/generated/'
-- Click 'Run'
+1. Right-click generate.mtl file, 'Run-As', 'Run Configurations...'
+2. Select 'Acceleo Application' and click 'New launch configuration'
+    - Name: 'Studyplan generate.mtl'
+    - Project: 'tdt4250.studyplan.acceleo'
+    - Main class: 'tdt4250.studyplan.acceleo.main.Generate'
+    - Model: '/tdt4250.studyplan.model/model/Sample.xmi'
+    - Target: '/tdt4250.studyplan.acceleo/generated/'
+3. Click 'Run'
 
 ## Constraints
 
