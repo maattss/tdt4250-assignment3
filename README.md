@@ -9,7 +9,7 @@ Generated HTML-file located in [tdt4250.studyplan.acceleo/generated](https://git
 
 ## Development and running transformation
 
-How the model is transformed from Ecore to HTMl is described in the [generate.mtl](./tdt4250.studyplan.acceleo/src/tdt4250/studyplan/acceleo/main/generate.mtl) file. Edit this file if you want to change how the transformation is done.
+How the model is transformed from Ecore to HTML is described in the [generate.mtl](./tdt4250.studyplan.acceleo/src/tdt4250/studyplan/acceleo/main/generate.mtl) file. Edit this file if you want to change how the transformation is done.
 
 To re-generate HTML file run, the generate.mtl file using this procedure and configurations:
 
