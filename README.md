@@ -37,7 +37,7 @@ A courses included in a semester can be mandatory or elective.
 
 ### Plant UML diagram
 
-![plant UML model](https://i.imgur.com/q3alEsn.png)
+<img src="https://i.imgur.com/q3alEsn.png" width="80%">
 
 ## Model improvements from assignment 1
 
@@ -62,4 +62,4 @@ The Sample.xmi describes two studyprograms from the Department of Computer Scien
 
 ## HTML rendered screenshot
 
-<img src="https://i.imgur.com/n2xFHJJ.png" width="50%">
+<img src="https://i.imgur.com/n2xFHJJ.png" width="80%">
